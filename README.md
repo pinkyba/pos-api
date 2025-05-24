@@ -1,1 +1,1 @@
-# pos-api
+# POS api
