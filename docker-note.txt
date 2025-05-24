@@ -1,0 +1,28 @@
+1. create docker-compose.yml file
+2. create Dockerfile
+3. create Nginx config file (docker/nginx/default.conf)
+4. Build Docker Containers: In your terminal, inside the pos-system project folder, run:
+docker-compose up -d --build
+This will build the PHP container with PHP 8.2, the Nginx server, and MySQL.
+
+5. Install Laravel (inside the PHP container):
+docker-compose exec app bash
+Steps to manage Docker containers:
+    If you want to exit the container to return to your host machine's terminal:
+    exit
+
+
+This will drop you into the PHP container, where you can run:
+6. composer create-project --prefer-dist laravel/laravel pos-system
+
+Run Laravel Migrations (if necessary for your database):
+php artisan migrate
+
+Docker down
+docker-compose down
+Docker up
+docker-compose up -d --build
+
+
+# Stops and removes containers AND volumes
+docker-compose up -d        # Recreates with new password
