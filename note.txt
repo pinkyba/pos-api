@@ -1,0 +1,11 @@
+Class/Folder	Purpose
+============    ========
+Repositories/	Access database
+Services/Logics/	Handle business rules, processing
+Http/Controllers/	Entry point of request
+
+Layer   	Responsibility	
+=====       ==============
+Controller(UserController)  	Receives HTTP request, passes to Service/Logic. No business logic inside Controller.
+Logic/Service (UserLogic)   	Handles application/business logic, combines multiple repository calls if needed.
+Repository (UserRepository) 	Only direct database query operations. Fetch or save to DB.
